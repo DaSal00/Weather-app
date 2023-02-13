@@ -51,17 +51,10 @@ body{
     display: flex;
     flex-direction: column;
 }
-
-.weather:nth-child(3){
+.temp{
     display: flex;
-   flex-direction: row;
-}
-
-.center {
-    text-align: center;
-}
-
-.left{
-    text-align: left;
-    padding-left: 13rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
 }
