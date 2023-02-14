@@ -1,3 +1,4 @@
+//selecting elements via html DOM
 const inputForm = document.querySelector('#inputForm');
 const btn = document.querySelector('#look')
 const cityName = document.querySelector('#city');
@@ -5,10 +6,15 @@ const temp = document.querySelector('#deg');
 const weatherType = document.querySelector('#weatherType')
 const humidity = document.querySelector('#humidity');
 const windSpeed = document.querySelector('#windSpeed');
+
+//variable that will contain our city
 let city;
 
-const apiKey = "bcd281ae7a31d69d4368a2ee9379c1cb"
+// you need to have own openweather api key
+const apiKey = ""
 
+
+//function for geting api response
 async function getWeather(city,apiKey){
     let  response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
     let obj = await response.json();
